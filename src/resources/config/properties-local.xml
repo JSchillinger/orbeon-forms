@@ -3,7 +3,9 @@
 
 	<property as="xs:boolean" name="oxf.fr.persistence.sly-persistence.autosave" value="false"/>
 	<property as="xs:string" name="oxf.fr.persistence.provider.sly.*.*" value="sly-persistence"/>
-	<property as="xs:anyURI" name="oxf.fr.persistence.sly-persistence.uri" value="http://orbeontest.privemanagers.com/orbeon/"/>
+	
+	<!-- Test Server URL for now -->
+	<property as="xs:anyURI" name="oxf.fr.persistence.sly-persistence.uri" value="http://fsuat.privemanagers.com/orbeon/"/>
 	
 	<property as="xs:string" name="oxf.fr.authentication.method" value="header"/>
 	<property as="xs:string" name="oxf.fr.authentication.header.username" value="orbeon-username"/>
