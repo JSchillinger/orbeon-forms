@@ -1090,7 +1090,7 @@
 
     </target>
 
-    <target name="orbeon-dist-war" depends="jars, exist-import-sample-data-to-build" description="Creates Orbeon Forms WAR">
+    <target name="orbeon-dist-war" depends="clean, jars, exist-import-sample-data-to-build" description="Creates Orbeon Forms WAR">
         <mkdir dir="${build.distrib.dir}"/>
 
         <antcall target="war">
@@ -1101,7 +1101,7 @@
             <param name="target" value="war"/>
             <param name="build.root" value="${build.root}"/>
         </antcall>
-        <zip zipfile="${build.distrib.dir}/${versioned-name}.war">
+        <zip zipfile="${build.distrib.dir}/orbeon.war">
             <zipfileset dir="${war.dir}">
                 <!-- This is already added to orbeon-resources-public.jar -->
                 <exclude name="WEB-INF/resources/ops"/>
